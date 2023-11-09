@@ -5,10 +5,12 @@ const prodScreen = document.querySelector(".prod");
 const screen = document.querySelector(".screen");
 
 const clearButton = document.querySelector("#clear");
+const delButton = document.querySelector("#delete");
 
 allNumButtons.forEach((el) => el.addEventListener("click", UpdateScreen));
 allOpButtons.forEach((el) => el.addEventListener("click", SetOperator));
 clearButton.addEventListener("click", ClearCalc);
+delButton.addEventListener("click", DeleteN);
 eqButton.addEventListener("click", Equals);
 
 let startedSecond = false;
@@ -77,6 +79,11 @@ function ClearCalc()
     numB = 0;
     prod = 0;
     startedSecond = false;
+}
+
+function DeleteN(e)
+{
+    screen.textContent = screen.textContent.slice(0, -1);
 }
 
 function Operate(a, b, op)
