@@ -69,6 +69,26 @@ body
     margin: 10px;
 }
 
+.credits
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.copyr
+{
+    margin: 8px;
+}
+
+.icon
+{
+    width: 20px;
+    margin: 8px;
+
+}
+
 .prod
 {
     margin: 10px;

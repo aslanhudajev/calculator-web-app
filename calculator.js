@@ -47,11 +47,11 @@ function SetOperator(e)
 function EvaluateOperator(e)
 {
     if(!startedSecond){
-        numA = parseInt(screen.textContent);
+        numA = parseFloat(screen.textContent);
         startedSecond = true;
         newWrite = true;
     } else{
-        numB = parseInt(screen.textContent);        
+        numB = parseFloat(screen.textContent);        
         prod = Operate(numA, numB, currOp);
         numA = prod;
 
@@ -117,7 +117,7 @@ function Divide(a, b)
 function Equals()
 {
     if(startedSecond){
-        numB = parseInt(screen.textContent);
+        numB = parseFloat(screen.textContent);
         prod = Operate(numA, numB, currOp);
         numA = prod;
 
