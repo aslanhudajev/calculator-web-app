@@ -1,5 +1,7 @@
 const allOpButtons = document.querySelectorAll(".opb");
 const allNumButtons = document.querySelectorAll(".nb");
+const eqButton = document.querySelector(".eq");
+const prodScreen = document.querySelector(".prod");
 const screen = document.querySelector(".screen");
 
 const clearButton = document.querySelector("#clear");
@@ -7,6 +9,7 @@ const clearButton = document.querySelector("#clear");
 allNumButtons.forEach((el) => el.addEventListener("click", UpdateScreen));
 allOpButtons.forEach((el) => el.addEventListener("click", SetOperator));
 clearButton.addEventListener("click", ClearCalc);
+eqButton.addEventListener("click", Equals);
 
 let startedSecond = false;
 let newWrite = false;
@@ -33,10 +36,12 @@ function UpdateScreen(e)
 
 function SetOperator(e)
 {
-    if(currOp == "") currOp = e.target.id;
-    else nextOp = e.target.id;
-
-    EvaluateOperator();
+    if(currOp === "")
+        currOp = e.target.id;
+    else
+        nextOp = e.target.id;
+    if(newWrite === false)
+        EvaluateOperator();
 }
 
 function EvaluateOperator(e)
@@ -55,6 +60,8 @@ function EvaluateOperator(e)
 
         console.log(prod);
     }
+
+    prodScreen.textContent = prod;
 }
 
 function ClearScreen()
@@ -105,4 +112,22 @@ function Multiply(a, b)
 function Divide(a, b)
 {
     return a / b;
+}
+
+function Equals()
+{
+    if(startedSecond){
+        numB = parseInt(screen.textContent);
+        prod = Operate(numA, numB, currOp);
+        numA = prod;
+
+        newWrite = true;
+
+        currOp = "";
+        nextOp = ""
+
+        prodScreen.textContent = prod;
+
+        ClearScreen();
+    }
 }

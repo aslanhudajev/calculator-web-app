@@ -5,40 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="calculator.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Calculator App | Calculate and Evaluate Mathematic Formulas</title>
 </head>
 
 <body>
     <div class="container">
         <div class="calculator">
-            <div class="screen">0</div>
-            <div class="br1">
-                <button class="bb" id="clear">clear</button>
-                <button class="bb" id="delete">delete</button>
+            <div class="screen-container">
+                <div class="screen-inner">
+                    <div class="tsmall prod">0</div>
+                    <div class="txbig screen">0</div>
+                </div>
             </div>
-            <div class="br2">
-                <button class="nb" id="7">7</button>
-                <button class="nb" id="8">8</button>
-                <button class="nb" id="9">9</button>
-                <button class="opb" id="/">/</button>
+            <div class="brf">
+                <button class="tcolor-w fb bb bold tbig" id="clear">CLEAR</button>
+                <button class="tcolor-w fb bb bold tbig" id="delete">DELETE</button>
             </div>
-            <div class="br3">
-                <button class="nb" id="4">4</button>
-                <button class="nb" id="5">5</button>
-                <button class="nb" id="6">6</button>
-                <button class="opb" id="*">*</button>
+            <div class="br">
+                <button class="tcolor-contrast tmed bold np nb" id="7">7</button>
+                <button class="tcolor-contrast tmed bold np nb" id="8">8</button>
+                <button class="tcolor-contrast tmed bold np nb" id="9">9</button>
+                <button class="tcolor-contrast tmed bold np opb" id="/">/</button>
             </div>
-            <div class="br4">
-                <button class="nb" id="1">1</button>
-                <button class="nb" id="2">2</button>
-                <button class="nb" id="3">3</button>
-                <button class="opb" id="-">-</button>
+            <div class="br">
+                <button class="tcolor-contrast tmed bold np nb" id="4">4</button>
+                <button class="tcolor-contrast tmed bold np nb" id="5">5</button>
+                <button class="tcolor-contrast tmed bold np nb" id="6">6</button>
+                <button class="tcolor-contrast tmed bold np opb" id="*">*</button>
             </div>
-            <div class="br5">
-                <button class="nb" id=".">.</button>
-                <button class="nb" id="0">0</button>
-                <button class="opb" id="=">=</button>
-                <button class="opb" id="+">+</button>
+            <div class="br">
+                <button class="tcolor-contrast tmed bold np nb" id="1">1</button>
+                <button class="tcolor-contrast tmed bold np nb" id="2">2</button>
+                <button class="tcolor-contrast tmed bold np nb" id="3">3</button>
+                <button class="tcolor-contrast tmed bold np opb" id="-">-</button>
+            </div>
+            <div class="br">
+                <button class="tcolor-contrast tmed bold np nb" id=".">.</button>
+                <button class="tcolor-contrast tmed bold np nb" id="0">0</button>
+                <button class="tcolor-contrast tmed bold np eq" id="=">=</button>
+                <button class="tcolor-contrast tmed bold np opb" id="+">+</button>
             </div>
         </div>
     </div>
